@@ -1,0 +1,26 @@
+name: Portfolio guard
+
+# The Maker Portfolio URLs are permanent (see CLAUDE.md). This fails any push or
+# pull request that removes a portfolio page or breaks a link inside one, and
+# checks the live site once a day.
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "17 14 * * *"
+  workflow_dispatch:
+
+jobs:
+  files:
+    if: github.event_name == 'push' || github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: .github/check-portfolio.sh files
+
+  live:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: .github/check-portfolio.sh live
