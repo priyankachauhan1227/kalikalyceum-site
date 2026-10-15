@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MetaSight – Maker Portfolio – Kalika Lyceum</title>
+  <meta name="description" content="Indoor orientation for blind users, spoken through Meta glasses." />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <main class="wrap legal-wrap">
+    <article class="card legal">
+      <a class="back" href="index.html">← Maker Portfolio</a>
+      <p class="eyebrow">Maker Portfolio</p>
+      <h1>MetaSight</h1>
+      <p class="lead">Indoor orientation for blind users, spoken through Meta glasses.</p>
+
+      <!-- Add more buttons inside .links when the URLs exist:
+      <a href="https://apps.apple.com/app/idXXXXXXXXX">Download on the App Store</a>
+      <a href="https://youtube.com/...">Watch the demo</a>
+      -->
+
+      <h2>About</h2>
+
+      <p>MetaSight helps a blind person find their bearings indoors. A caregiver puts printed
+      AprilTag markers on the walls and records what is near each one. The app reads whichever markers
+      the glasses' camera can see and speaks the orientation out loud, for example
+      <em>"you are facing the kitchen door; the balcony is behind you"</em>.</p>
+
+      <p>It is deliberately <strong>not</strong> a mobility aid. It doesn't detect obstacles or
+      traffic, and it never says a route is safe. The cane or the guide dog does that. It also has
+      no map: the markers are the map, because every removed subsystem is one that could have given
+      a confident wrong answer.</p>
+
+      <h2>What I built</h2>
+      <ul>
+        <li>SignpostKit, the tested core logic that turns the markers it sees into spoken orientation</li>
+        <li>A prototype that streams live video from Meta glasses to an iPhone, built to test the camera path</li>
+        <li>A measurement plan for how well AprilTags are detected from a body-worn camera while walking</li>
+        <li>Distribution through TestFlight, because Meta's glasses toolkit can't yet ship on the App Store</li>
+      </ul>
+
+      <!-- Design documents (add later):
+      <h2>Design documents</h2>
+      <ul>
+        <li><a href="docs/example.pdf">Example design document (PDF)</a></li>
+      </ul>
+      -->
+    </article>
+  </main>
+</body>
+</html>
